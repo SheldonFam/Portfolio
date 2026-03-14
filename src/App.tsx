@@ -5,6 +5,8 @@ import { Projects } from "./components/Projects/Projects";
 import { Experience } from "./components/Experience/Experience";
 import { Skills } from "./components/Skills/Skills";
 import { Contact } from "./components/Contact/Contact";
+import { Footer } from "./components/Footer/Footer";
+import { ScrollToTop } from "./components/common/ScrollToTop";
 
 function App() {
   return (
@@ -15,9 +17,8 @@ function App() {
       <Experience />
       <Skills />
       <Contact />
-      <footer className="text-center py-8 border-t border-border-custom text-xs text-text-muted">
-        &copy; 2026 Sheldon Fam. Built with care.
-      </footer>
+      <Footer />
+      <ScrollToTop />
     </div>
   );
 }

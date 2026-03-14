@@ -11,3 +11,65 @@
 .animate-pulse-dot {
   animation: pulse-dot 2s infinite;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-pulse-dot {
+    animation: none;
+  }
+}
+
+/* Scroll-triggered fade-in */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  opacity: 0;
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-up {
+    opacity: 1;
+    animation: none;
+  }
+}
+
+/* ── Staggered card entrance ── */
+.stagger-grid > * {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.stagger-grid.visible > * {
+  animation: fade-in-up 0.5s ease-out forwards;
+}
+
+.stagger-grid.visible > *:nth-child(1) { animation-delay: 0ms; }
+.stagger-grid.visible > *:nth-child(2) { animation-delay: 80ms; }
+.stagger-grid.visible > *:nth-child(3) { animation-delay: 160ms; }
+.stagger-grid.visible > *:nth-child(4) { animation-delay: 240ms; }
+.stagger-grid.visible > *:nth-child(5) { animation-delay: 320ms; }
+.stagger-grid.visible > *:nth-child(6) { animation-delay: 400ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .stagger-grid > *,
+  .stagger-grid.visible > * {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+
+/* ── Subtle dot grid background texture ── */
+.bg-dot-pattern {
+  background-image: radial-gradient(circle, var(--theme-border) 1px, transparent 1px);
+  background-size: 24px 24px;
+}

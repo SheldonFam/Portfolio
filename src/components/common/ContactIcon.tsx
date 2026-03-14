@@ -9,12 +9,12 @@ interface ContactIconProps {
 export function ContactIcon({ type }: ContactIconProps) {
   switch (type) {
     case "email":
-      return <Mail size={18} />;
+      return <Mail size={18} aria-hidden="true" />;
     case "linkedin":
-      return <FaLinkedinIn size={18} />;
+      return <FaLinkedinIn size={18} aria-hidden="true" />;
     case "github":
-      return <FaGithub size={18} />;
+      return <FaGithub size={18} aria-hidden="true" />;
     case "whatsapp":
-      return <FaWhatsapp size={18} />;
+      return <FaWhatsapp size={18} aria-hidden="true" />;
   }
 }

@@ -30,7 +30,7 @@ export function SkillCard({ category }: SkillCardProps) {
     <div className="bg-surface border border-border-custom rounded-xl p-6 transition-colors hover:border-accent-border">
       <h3 className="text-sm font-bold text-text-primary mb-3 flex items-center gap-2">
         <span className="w-7 h-7 bg-accent-glow rounded-md flex items-center justify-center text-accent">
-          {Icon && <Icon size={16} />}
+          {Icon && <Icon size={16} aria-hidden="true" />}
         </span>
         {category.title}
       </h3>
